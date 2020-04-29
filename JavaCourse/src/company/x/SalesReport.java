@@ -12,10 +12,10 @@ public class SalesReport {
         scanner.close();
 
         if(salesWeek >= salesWeekBase){
-            System.out.println("Felicidades! Usted a alcanzado el numero de ventas semanales");
+            System.out.println("Felicidades! Usted ha alcanzado el numero de ventas semanales");
         }else{
             int salesMissing = salesWeekBase - salesWeek;
-            System.out.println("Usted no complio con las ventas semanales. Le faltaron " + salesMissing + " ventas");
+            System.out.println("Usted no cumplio con las ventas semanales. Le faltaron " + salesMissing + " ventas");
         }
     }
 }
