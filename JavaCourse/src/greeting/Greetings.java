@@ -7,6 +7,8 @@ public class Greetings {
         System.out.println("Entre su nombre:");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.next();
+        scanner.close();
+        
         greetUser(name);
     }
 
