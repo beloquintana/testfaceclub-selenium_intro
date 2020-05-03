@@ -13,7 +13,12 @@ public class Cat extends Animal {
 
     @Override
     public void run(int meters){
-
+        int maxMeters = 100;
+        if(meters < maxMeters)
+            System.out.println("OK");
+        else
+            System.out.println("El gato no tiene suficiente resistencia para correr mas de "
+                    + maxMeters + " metros");
     }
 
 
