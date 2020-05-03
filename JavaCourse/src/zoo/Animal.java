@@ -1,6 +1,6 @@
 package zoo;
 
-public class Animal {
+public abstract class Animal {
     protected String color;
     protected int age;
 
@@ -8,6 +8,8 @@ public class Animal {
         this.color = color;
         this.age = age;
     }
+
+    public abstract void run(int meters);
 
     public int getAge() {
         return age;

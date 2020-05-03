@@ -6,6 +6,11 @@ public class Dog extends Animal{
         super(color, age);
     }
 
+    @Override
+    public void run(int meters) {
+
+    }
+
     //ladrar
     public String bark(){
         return "jau";

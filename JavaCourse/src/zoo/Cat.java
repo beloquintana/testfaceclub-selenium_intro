@@ -11,4 +11,10 @@ public class Cat extends Animal {
         return "miau";
     }
 
+    @Override
+    public void run(int meters){
+
+    }
+
+
 }
