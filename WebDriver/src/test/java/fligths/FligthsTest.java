@@ -16,6 +16,8 @@ public class FligthsTest {
         webDriver.get("http://verstandqa.com/aut-vuelos/");
 
         search();
+        selectTravel();
+        payTravel();
 
         webDriver.quit();
     }
@@ -46,6 +48,40 @@ public class FligthsTest {
 
         WebElement searchButton = webDriver.findElement(By.tagName("button"));
         searchButton.click();
+    }
+
+    private void selectTravel(){
+        WebElement optionOne = webDriver.findElement(By.xpath("//*[@id='flights']/div[1]/a"));
+        optionOne.click();
+    }
+
+    private void payTravel() {
+        Select cardTypeSelect = new Select(webDriver.findElement(By.id("cards")));
+        cardTypeSelect.selectByVisibleText("Maestro");
+
+        WebElement cardNumberInput = webDriver.findElement(By.id("cardNumber"));
+        cardNumberInput.sendKeys("456678952359");
+
+        WebElement codeInput = webDriver.findElement(By.id("code"));
+        codeInput.sendKeys("123");
+
+        Select monthSelect = new Select(webDriver.findElement(By.id("month")));
+        monthSelect.selectByVisibleText("10");
+
+        Select yearSelect = new Select(webDriver.findElement(By.id("year")));
+        yearSelect.selectByVisibleText("2024");
+
+        WebElement nameInput = webDriver.findElement(By.xpath("//*[@id='paymentMethod']/div[2]/div[1]/input"));
+        nameInput.sendKeys("Juan");
+
+        WebElement lastNameInput = webDriver.findElement(By.xpath("//*[@id='paymentMethod']/div[2]/div[2]/input"));
+        lastNameInput.sendKeys("Patricio");
+
+        Select countrySelect = new Select(webDriver.findElement(By.id("country")));
+        countrySelect.selectByVisibleText("Cuba");
+
+        WebElement payButton = webDriver.findElement(By.xpath("//*[@id='paymentMethod']//button"));
+        payButton.click();
     }
 
     public static void main(String arg[]){
