@@ -1,5 +1,6 @@
 package login;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,6 +39,16 @@ public class LoginTest {
 
         WebElement addButton = webDriver.findElement(By.id("addButton"));
         addButton.click();
+
+        //Obtener una alerta
+        Alert alert = webDriver.switchTo().alert();
+
+        //Obtener mensaje de una alerta
+        String alertMessage = alert.getText();
+        System.out.println(alertMessage);
+
+        //Aceptando una alerta
+        alert.accept();
 
         webDriver.quit();
     }
