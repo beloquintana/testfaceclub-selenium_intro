@@ -11,7 +11,8 @@ public class LoginTest {
     public void setUp(){
         System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
         webDriver = new ChromeDriver();
-        webDriver.get("http://verstandqa.com/ejercicios/");
+        webDriver.get("http://testfaceclub.com/ejercicios/");
+        webDriver.manage().window().maximize();
 
         //Login
         WebElement inputName = webDriver.findElement(By.id("user"));
