@@ -1,1 +1,7 @@
 JavaCourse/out/
+WebDriver/resources/screenshots/DynamicLoadingTests.png
+WebDriver/target/test-classes/base/BaseTest.class
+WebDriver/target/test-classes/dynamic/loading/DynamicLoadingTests.class
+WebDriver/target/test-classes/fligths/FligthsTest.class
+WebDriver/target/test-classes/google/GoogleSearchTest.class
+WebDriver/target/test-classes/menu/ShiftingContentTest.class
