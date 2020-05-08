@@ -13,7 +13,7 @@ public class FligthsTest {
     public void setUp(){
         System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
         webDriver = new ChromeDriver();
-        webDriver.get("http://verstandqa.com/aut-vuelos/");
+        webDriver.get("http://testfaceclub.com/aut-vuelos/");
 
         search();
         selectTravel();
@@ -32,11 +32,11 @@ public class FligthsTest {
         Select toSelect = new Select(webDriver.findElement(By.id("to")));
         toSelect.selectByVisibleText("Buenos Aires (BUE)");
 
-        WebElement dateFromInput = webDriver.findElement(By.xpath("//*[@id='mainpanel']/div[2]/form/div[2]/div[3]//input"));
+        WebElement dateFromInput = webDriver.findElement(By.xpath("//*[@ng-model=\"dateFrom\"]"));
         dateFromInput.sendKeys("06/25/2020");
         dateFromInput.sendKeys(Keys.ENTER);
 
-        WebElement dateToInput = webDriver.findElement(By.xpath("//*[@id='mainpanel']/div[2]/form/div[2]/div[4]//input"));
+        WebElement dateToInput = webDriver.findElement(By.xpath("//*[@ng-model=\"dateto\"]"));
         dateToInput.sendKeys("09/10/2020");
         dateToInput.sendKeys(Keys.ENTER);
 
