@@ -1,11 +1,13 @@
 package dynamic.loading;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.google.common.io.Files;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.File;
+import java.io.IOException;
 
 public class DynamicLoadingTests {
     private WebDriver webDriver;
@@ -30,8 +32,22 @@ public class DynamicLoadingTests {
         wait.until(ExpectedConditions.visibilityOf(textElement));
 
         System.out.println(textElement.getText());
+        takeScreenShot("DynamicLoadingTests");
 
         webDriver.quit();
+    }
+
+    private String takeScreenShot(String imagesName){
+        TakesScreenshot takesScreenshot = (TakesScreenshot)webDriver;
+        File screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE);
+        String imagePath = "resources/screenshots/" + imagesName +".png";
+        try {
+            Files.move(screenshot, new File(imagePath));
+            return imagePath;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "";
+        }
     }
 
     public static void main(String[] args) {
