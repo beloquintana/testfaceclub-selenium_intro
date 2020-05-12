@@ -16,7 +16,7 @@ public class BaseTest {
         EmployeePage employeePage = loginPage.loginAs("user1","admin");
         employeePage.addEmployee("Juan","Juan@gmail.com","MTZ","58899624");
 
-        //webDriver.quit();
+        webDriver.quit();
     }
 
     public static void main(String arg[]){
