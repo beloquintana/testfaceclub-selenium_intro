@@ -9,3 +9,6 @@ Login_PageObject_TestNG/resources/screenshots/
 Login_PageObject_TestNG/test-output/
 Flights_PageObject_TestNG/resources/screenshots/
 Flights_PageObject_TestNG/test-output/
+SeleniumProject/resources/screenshots/
+SeleniumProject/target/
+SeleniumProject/test-output/

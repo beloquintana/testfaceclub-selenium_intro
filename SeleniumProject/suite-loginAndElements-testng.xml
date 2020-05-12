@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="LoginAndElements Regression" verbose="1" >
+    <test name="LoginAndElements Test" >
+        <packages>
+            <package name="addAndRemoveElements" />
+            <package name="login" />
+        </packages>
+    </test>
+</suite>
