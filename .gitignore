@@ -3,3 +3,4 @@ WebDriver/resources/screenshots/
 WebDriver/target/
 Login_PageObject/target/
 Flights_PageObject/target/
+Login_PageObject_TestNG/target/
