@@ -5,3 +5,5 @@ Login_PageObject/target/
 Flights_PageObject/target/
 Login_PageObject_TestNG/target/
 Flights_PageObject_TestNG/target/
+Login_PageObject_TestNG/resources/screenshots/
+Login_PageObject_TestNG/test-output/

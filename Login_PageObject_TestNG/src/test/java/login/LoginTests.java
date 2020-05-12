@@ -12,6 +12,6 @@ public class LoginTests extends BaseTest {
     public void testSuccesfulLogin(){
         LoginPage loginPage = new LoginPage(webDriver);
         EmployeePage employeePage = loginPage.loginAs("user1","admin");
-        Assert.assertTrue(employeePage.isEmployeePageDisplayed());
+        Assert.assertTrue(!employeePage.isEmployeePageDisplayed());
     }
 }
