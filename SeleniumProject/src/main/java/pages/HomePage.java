@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage extends BasePage {
-    private By dynamicLoadingLink = By.linkText("Dynamic Loading");
     private By formAuthenticationLink = By.linkText("Form Authentication");
     private By addAndRemoveElementsLink = By.linkText("Add/Remove Elements");
     private By checkboxesLink = By.linkText("Checkboxes");
